@@ -30,7 +30,7 @@ const Header = ({ isMenuOpen }) => {
 
       header.current?.appendChild(i);
     }
-  }, []);
+  });
 
   return (
     <header ref={header}>
