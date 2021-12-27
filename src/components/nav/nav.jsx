@@ -2,7 +2,7 @@ import './side.scss';
 import Logo from '../../asset/images/logo.svg';
 const Nav = ({ isMenuOpen, setisMenuOpen }) => {
   return (
-    <div className="side-nav">
+    <div className="side-nav"  data-scroll-sticky>
       <nav className="nav">
         <img src={Logo} alt="" className="logo" />
         <div

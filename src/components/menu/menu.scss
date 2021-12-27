@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-left: 1px solid #413d22;
   background-color: rgba($color: #151618, $alpha: 0.9);
 }
 .menu-container .menu .menu-item box-icon {
@@ -73,7 +74,10 @@
   .menu-container {
     overflow: scroll;
   }
-
+  .menu-container .menu .menu-item {
+    border-left: 0px solid #413d22;
+    border-top: 1px solid #413d22;
+  }
   .menu-container .menu .menu-item box-icon {
     position: relative;
 
@@ -84,9 +88,11 @@
     opacity: 1;
     transform: translateY(0);
     transition: 0.3s all;
+    
   }
 }
 @media screen and (max-width: 425px) {
+
   .menu-body-content {
     font-size: 8px;
   }

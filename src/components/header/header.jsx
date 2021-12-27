@@ -35,7 +35,7 @@ const Header = ({ isMenuOpen }) => {
   return (
     <header ref={header}>
       <div className="content-container">
-        <div className={isMenuOpen ? 'display-none ' : 'content'}>
+        <div className={isMenuOpen ? 'display-none ' : 'content'}  data-scroll data-scroll-speed="3" data-scroll-position="top">
           <h1>DevOxygen</h1>
           <p>Develop by devoxogen</p>
         </div>
