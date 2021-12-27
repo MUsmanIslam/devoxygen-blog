@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: #eee;
+  font-family: Monument;
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  position: relative;
+  background-color: #151618;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.rain {
+  position: absolute;
+  top: 0;
+  height: 150px;
+  background: linear-gradient(transparent, white);
+  transition: 1s all ease-in-out;
+  transform: translateY(var(--height));
+
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  animation: dropDown 3s linear infinite;
+}
+
+.rain:nth-child(3n + 1) {
+  background: linear-gradient(transparent, #fdf088);
+}
+.rain:nth-child(3n + 2) {
+  background: linear-gradient(transparent, #f5e56d);
+}
+.rain:nth-child(3n + 3) {
+  background: linear-gradient(transparent, #d6c445);
+}
+.rain:nth-child(3n + 4) {
+  background: linear-gradient(transparent, #b6a21e);
+}
+
+@keyframes dropDown {
+  100% {
+    transform: translateY(calc(100vh + 150px));
+  }
+}
+
+/* navbar style */
+
+a {
+  text-decoration: none;
+  color: #fdf088;
+  font-weight: bold;
+}
+
+.content-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  color: white;
+
+}
+
+.content-container:hover ~ .rain {
+  filter: blur(5px);
+}
+
+.content h1 {
+  animation: glitch 5s linear infinite;
+}
+
+@keyframes glitch {
+  0%,
+  100% {
+    color: white;
+  }
+
+  50% {
+    color: #d6c445;
+  }
+}
